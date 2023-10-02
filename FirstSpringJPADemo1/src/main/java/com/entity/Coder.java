@@ -4,19 +4,22 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 
 @Entity
 
-@Table(name="java_Coder")
-
+//@Table(name="java_Coder")
+@Table(name="Virat")
 public class Coder {
 
 	@Id
-
 	int id;
-
+@NotNull
+@NotEmpty(message="Name can not be empty")
 	String cname;
-
+@NotNull
+@NotEmpty(message="Tech can not be empty")
 	String tech;
 
 	public int getId() {
